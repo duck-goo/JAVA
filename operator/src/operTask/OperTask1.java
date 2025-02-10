@@ -13,7 +13,7 @@ public class OperTask1 {
 // 삼항연산자 사용하기      
 	     System.out.print("값을 입력하세요: ");
 		 String input = sc.next();      
-		 String result = (input.contains(".")) ? "입력한 값은 실수입니다." : "입력한 값은 정수입니다.";
+		 String result = input.contains(".") ? "입력한 값은 실수입니다." : "입력한 값은 정수입니다.";
 		 System.out.println(result);
 
 	}

@@ -1,32 +1,16 @@
 package forTask;
 
+import java.util.Scanner;
+
 public class ForTask1 {
 	public static void main(String[] args) {
 
     
-//  플레티넘
-//  A~F까지 출력하기
-//  A~F까지 중 C를 제외하고 출력하기
-  
-//  다이아
-//  012340123401234 출력하기
-//  aBcDeF...Z까지 출력하기
-  
-//  마스터
-//  별찍기
-//   *
-//  ***
-//  *****
-//*******
-//*********
-		
-//  브론즈
 //  1~100까지 출력하기
-//		for (int i = 1; i <= 100; i++) {
-//			System.out.println(i + " ");
-//		}
-//		System.out.println();
-//      
+		for (int i = 1; i <= 100; i++) {
+			System.out.println(i + " ");
+		}
+		System.out.println();   
 
 //// 100~1까지 출력
 //		
@@ -49,24 +33,31 @@ public class ForTask1 {
         System.out.println(sum);
 //
 //// 1~n까지의 합 (n값 지정)
-        int n = 10, sumN = 0;
+        Scanner sc = new Scanner(System.in);
+        int n = 0, sumN = 0;
+        n = sc.nextInt();
         for(int i = 1; i <= n; i++) {
         	sumN += i;
         }
         System.out.println(sumN);
 //    
 //// A~F까지 출력
+//        char a = 'A';
+//        for(int i = 0; i < 6; i++)
+//        	System.out.println((char)(a + i));
+        
         for(char a = 'A'; a <= 'F'; a++) {
-             System.out.print(a + " ");
+            System.out.print(a + " ");
         }
         System.out.println();
 //
 //// A~F까지 중 C를 제외하고 출력
+
         for(char b = 'A'; b <= 'F'; b++) {
         if(b != 'C') {
              System.out.print(b + " ");
-            }
-            }
+        }
+        }
         System.out.println();
 //        
 //  012340123401234 출력하기      
@@ -76,10 +67,9 @@ public class ForTask1 {
         System.out.println();
 
 // aBcDeF...Z까지 출력
+//        int gap = 'a' - 'A';
 //        for(int i = 0; i < 26; i++) {
-//        	char c = 'a' + i;
-//        for(int i = 0; i < 2;
-//            System.out.print(c);
+//            System.out.print(i % 2 == 0 ? (char)(a + gap + i) : (char)(a + i));
 //        }
 //        System.out.println();
         
