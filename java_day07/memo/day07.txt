@@ -1,0 +1,78 @@
+예외 처리
+try {
+	예외가 발생할 수 있는 문장
+	예외가 없을 때 실행할 문장
+} catch(예외이름 객체명) {
+	예외 발생 시 실행할 문장
+} catch(예외이름 객체명) {
+	예외 발생 시 실행할 문장
+} catch(예외이름 객체명) {
+	예외 발생 시 실행할 문장
+} finally {
+	예외 발생 여부에 상관없이 무조건 실행할 문장
+	※ 외부 장치와 연결했을 경우 다시 닫을 때 주로 사용된다.
+}
+
+예외 발생
+	- 직접 예외 발생시키기 위해서 예외 던지기를 사용해야 하며, 
+	이 때에는 생성자 호출 전 throw 키워드를 사용한다.
+	ex) throw new BadWordException
+
+
+======================================================================
+API(Application Programming Interface)
+	개발에 필요한 라이브러리들의 집합
+	선배 개발자들이 만들어 놓은 소스코드
+
+	- 내부 API
+		JDK 설치 시 제공해주는 기본 API
+		docs.oracle.com/javase
+
+	- 외부 API*중요*
+		선배 개발자들이 개발한 패키지 및 클래스들을 의미한다.
+		보통 JAR 파일로 배포하며 자바 프로젝트의 build path에 추가하여 사용할 수 있다.
+
+API 추가하는 방법
+1. 프로젝트를 우클릭한다.
+2. Build Path -> Configure Build Path 클릭한다
+3. Libraries 탭으로 이동 -> Classpath 선택
+4. Add External JARs... 클릭한다
+5. .jar를 추가한다
+6. Order and Export로 이동한다
+7. Select All -> Apply -> Apply and Close 적용
+
+SNS문자
+	- https://drive.google.com/file/d/1_uXl8r0mfiEY6dOfqhn_l1SpgrkQqTDJ/view?usp=drive_link
+
+SMS 오류
+	- https://developers.coolsms.co.kr/references/message-status-codes
+
+==============================================================================
+
+Object 클래스
+	1. toString()
+		항상 객체명을 출력할 때에는 toString()을 붙여서 출력해준다.
+		따라서 객체명만 출력메소드에 전달하더라도 toString() 문자열 값이 출력된다.
+		기본적으로 Object에서는 소속과 필드 주소를 문자열로 리턴해주지만,
+		실사용에서는 불필요한 정보이기 때문에, 재정의한 뒤 필드의 정보를 확인하도록 구현한다.
+		실무에서는 클래스 선언 시 각 필드의 초기화 여부를 확인하기 위해 toString()을 재정의하여 사용한다.
+
+	2. equals()
+		주소값 비교(==),
+		객체 주소 비교가 아닌 특정 필드를 비교해야 할 경우 재정의한다.
+
+	3. hashCode()
+		JVM에서 관리하는 중복 없는 값. 실제 메모리에 할당되는 주소와 다르다.
+		※ 컬렉션 프레임워크 챕터에서 재정의 목적을 이해하도록 한다.
+
+
+
+
+
+
+
+
+
+
+
+
