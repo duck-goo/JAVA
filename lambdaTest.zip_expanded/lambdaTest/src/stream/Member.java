@@ -3,14 +3,13 @@ package stream;
 import java.util.Objects;
 
 public class Member {
-	private String name;
-	private String hobby;
-	private String introduce;
+	String name;
+	String hobby;
+	String introduce;
 	
 	public Member() {;}
 
 	public Member(String name, String hobby, String introduce) {
-		super();
 		this.name = name;
 		this.hobby = hobby;
 		this.introduce = introduce;
